@@ -11,9 +11,7 @@ Galileo Black
  
 
 ## Description 
-> A brief description of your product. Include a brief summary for the services provided by the app.
-> Possible questions to answer here:  What is the motivation for the app? What are the goals of the app/ What problem will the app solve?
->
+A website that allows users to create an account to trade with other users. These trades can include physical products such as crocheted items, tattoos, or other creative projects. Users can post listings and add a description, images of their work, and what they're looking for in return. Users looking to trade can go to the marketplace and filter by location and what items or services they're looking for. The trade will include a private chat between users to agree upon a time and place. After a trade is complete the users have the option to leave reviews of the other trader. Reviews will include a star rating and optional description of how everything went. The user leaving a review will have the option to remain anonymous. If users have any issues they may reach out to system admins to resolve the issue. 
 
 ## App Functions
 1. Customer (the user with the customer role):
