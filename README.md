@@ -1,22 +1,8 @@
-This assignment is to get you started working on the Term Project!
-Tasks
-You will formalize the draft you worked on in class by documenting a project description. Just like you did with Assignment 1, open your project in VSCode and make the following changes in your local repository.
-
-1. Start from the main branch. Pull all the latest updates from origin/main to local/main.
-
-2. Create a new branch off of main. Name the branch [yourName-milestone0]. For example my new branch would be sntini-milestone0.
-
-3. Edit the main README.md file in your project repo main directory to include details about your app. Each person (customer/provider) should edit their own use-cases in the file.
-
-Use the following markdown format. Please retain all the formatting!
-
- 
-
 ## Title
-> Your project title
+Trade Tree
 
 ## Team Members
-> Team Member #1 name 
+Galileo Black
 
  
 
