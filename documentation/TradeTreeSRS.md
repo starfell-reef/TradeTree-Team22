@@ -1,11 +1,11 @@
 
-# Requirements – Starter Template
+# Requirements – Trade Tree
 
-**Project Name:** Your App Name \
-**Team:** Names and roles \
-**Course:** CSC 340\
-**Version:** 1.0\
-**Date:** 2026-08-25
+**Project Name:** Trade Tree
+**Team:** Galileo Black - Customer, Name and role
+**Course:** CSC 340
+**Version:** 1.0
+**Date:** 2026-09-18
 
 ---
 
@@ -35,69 +35,100 @@
 ---
 
 ## 2. Functional Requirements (User Stories)
-Write each story as: **As a `<role>`, I want `<capability>`, so that `<benefit>`.** Each story includes at least one **Given/When/Then** scenario.
 
-### 2.1 Customer Stories
-- **US‑1 — <short title>**  
-  _Story:_ As a customer, I want … so that …  
+### 2.1 User Stories
+- **US‑1 — Register profile**  
+  _Story:_ As a user, I want to create an account, so that I may interact with the website
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Register account
+    Given I have no account
+    When  I enter my credentials
+    Then  I should be registered and logged in 
   ```
 
-- **US‑2 — <short title>**  
-  _Story:_ As a customer, I want … so that …  
+- **US‑2 — Create a listing**  
+  _Story:_ As a user, I want to make a listing, so that I can trade
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Create a listing
+    Given I have something to trade
+    When  I press the Create a Listing button
+    Then  I should be able to create a listing
+    And   I should be able to view the listing
   ```
 
-### 2.2 Provider Stories
-- **US-20 — <short title>**  
-  _Story:_ As a provider, I want … so that …  
+- **US‑3 — Leaving reviews**  
+  _Story:_ As a user, I want to leave a review, so that others can see
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Leave a review
+    Given I have traded something recently
+    When  I press the Leave a Review button
+    Then  I should be able to leave a review with the person I traded with
+  ``
+
+- **US‑4 — Messaging posters**  
+  _Story:_ As a user, I want to message posters, so that we can trade 
+  _Acceptance:_
+  ```gherkin
+  Scenario: Messaging users
+    Given A trade listing has been posted
+    When  I press the Message button
+    Then  I can message the poster about the listing
   ```
 
-- **US-21 — <short title>**  
-  _Story:_ As a provider, I want … so that …  
+- **US‑5 — Editing account**  
+  _Story:_ As a user, I want to edit account, so that I can update my profile
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Editing account
+    Given I am logged into my account
+    When  I press the edit profile button
+    Then  I can edit my account
   ```
 
-### 2.3 SysAdmin Stories
-- **US‑30 — <short title>**  
-  _Story:_ As a sysadmin, I want … so that …  
+- **US‑6 — Reporting others**  
+  _Story:_ As a user, I wan tto report other users, so that they get an infraction
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Report needed
+    Given I am logged into my account
+    When  I press the report button
+    Then  A report is sent to admins regarding the user reported
   ```
 
-- **US‑31 — <short title>**  
-  _Story:_ As a sysadmin, I want … so that …  
+
+### 2.2 SysAdmin Stories
+- **US-20 — Reviewing reports**  
+  _Story:_ As an admin, I wan tto review reports, so that the site is safe
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Report requires review
+    Given I am logged into my account
+    When  A report is generated
+    Then  I should get a notification
+    And   I can look at the report
+  ```
+
+- **US-21 — Editing listings**  
+  _Story:_ As an admin, I want to edit listings, so that no scams are listed
+  _Acceptance:_
+  ```gherkin
+  Scenario: Listing needs editing
+    Given A listing is available
+    When  I press the Edit the Listing button
+    Then  I should be able to delete or edit the listing
+  ```
+
+- **US-22 — Removing users**  
+  _Story:_ As an admin, I want to remove users, so that bad users are removed
+  _Acceptance:_
+  ```gherkin
+  Scenario: A user needs removing
+    Given A user has account reports
+    When  I press the account punishments button
+    Then  I have the option to delete the account
   ```
 
 ---
