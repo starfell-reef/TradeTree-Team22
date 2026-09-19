@@ -2,7 +2,7 @@
 # Requirements – Trade Tree
 
 **Project Name:** Trade Tree
-**Team:** Galileo Black - Customer, Name and role
+**Team:** Galileo Black - Jacob Edwards and Galileo Black
 **Course:** CSC 340
 **Version:** 1.0
 **Date:** 2026-09-18
@@ -10,25 +10,28 @@
 ---
 
 ## 1. Overview
-**Vision.** One or two sentences: who this is for, the core problem, and the outcome.
+**Vision.** Trade Tree is for people who want to exchange creative goods and services without relying on traditional payment. The website will help users find relevant listings, communicate with trading partners, complete trades, and build trust through reviews.
 
-**Glossary** Terms used in the project
-- **Term 1:** description.
-- **Term 2:** description
+**Glossary.** Terms used in the project
+- **Listing:** A post describing an item or service that a user is offering and what they would like in return.
+- **Trade:** An exchange of goods or services agreed upon by two users.
+- **Marketplace:** The collection of active listings that users can browse and filter.
+- **Infraction:** A recorded violation of the website's rules that may result in account restrictions.
 
 **Primary Users / Roles.**
-- **Customer (e.g., Student/Patient/Pet Owner/etc. )** — 1 line goal statement.
-- **Provider (e.g., Teacher/Doctor/Pet Sitter/etc. )** — 1 line goal statement.
-- **SysAdmin (optional)** — 1 line goal statement.
+- **Customer:** A user who browses listings and contacts another user to request a trade.
+- **Provider:** A user who creates listings for goods or services and responds to trade requests.
+- **SysAdmin:** An administrator who moderates listings, reviews, reports, and user access.
 
 **Scope (this semester).**
-- <capability 1>
-- <capability 2>
-- <capability 3>
+- Account registration, profile management, and role-based access for users and administrators.
+- Creating, viewing, filtering, and moderating listings for tradeable goods and services.
+- Messaging between users about listings, reviews after completed trades, and reporting users or listings.
 
 **Out of scope (deferred).**
-- <deferred 1>
-- <deferred 2>
+- Integrated payments, shipping, and automatic valuation of goods or services.
+- Native mobile applications and integrations with external marketplaces or social networks.
+- Automated moderation using machine learning.
 
 > This document is **requirements‑level** and solution‑neutral; design decisions (UI layouts, API endpoints, schemas) are documented separately.
 
@@ -66,7 +69,7 @@
     Given I have traded something recently
     When  I press the Leave a Review button
     Then  I should be able to leave a review with the person I traded with
-  ``
+  ```
 
 - **US‑4 — Messaging posters**  
   _Story:_ As a user, I want to message posters, so that we can trade 
@@ -133,16 +136,20 @@
 
 ---
 
-## 3. Non‑Functional Requirements (make them measurable)
-- **Performance:** description 
-- **Availability/Reliability:** description
-- **Security/Privacy:** description
-- **Usability:** description
+## 3. Non‑Functional Requirements
+- **Performance:** The marketplace and listing pages should load within 3 seconds under normal course-project usage. Typical user actions should receive a response within 2 seconds.
+- **Availability/Reliability:** The application should preserve successfully submitted account, listing, message, review, and report data across sessions. Errors should provide a clear message without silently losing submitted data.
+- **Security/Privacy:** Passwords must not be stored or displayed in plain text. Users may access only their own profile information and conversations, while administrative actions must require an administrator role.
+- **Usability:** A new user should be able to register, find a listing, and send a message without assistance. Forms must label required fields and identify validation errors in plain language.
 
 ---
 
 ## 4. Assumptions, Constraints, and Policies
-- list any rules, policies, assumptions, etc.
+- Users are responsible for accurately describing their listings and for arranging safe trade details with other users.
+- The project is developed as a CSC 340 course project and must use the team's approved repository and development tools.
+- Users must not use the service for illegal goods, harassment, fraud, or content that violates the team's terms of service.
+- Administrators may remove listings, restrict accounts, or remove reviews that violate the service rules.
+- The system depends on users having internet access and a modern web browser.
 
 ---
 
