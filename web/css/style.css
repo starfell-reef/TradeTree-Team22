@@ -2,15 +2,27 @@
     box-sizing: border-box;
 }
 
+/* ------------------ */
+/* VARIABLES */
+/* ------------------ */
+
 :root {
-    color: #18352d;
-    background: #f4f0e8;
-    font-family: Georgia, "Times New Roman", serif;
+    /* font */
+    --font-fam: Georgia, "Times New Roman", serif;
+
+    /* colors */
+    --text-primary: #18352d;
+    --text-secondary: #b45f38;
+    --background-color: #f4f0e8;
+    
+
+    /* font-family: Georgia, "Times New Roman", serif; */
 }
 
 body {
     margin: 0;
     min-width: 320px;
+    background: var(--background-color);
 }
 
 .site-header,
@@ -26,7 +38,7 @@ body {
 }
 
 .site-logo {
-    color: #18352d;
+    color: var(--text-primary);
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
@@ -38,7 +50,7 @@ nav {
 }
 
 nav a {
-    color: #18352d;
+    color: var(--text-primary);
     text-decoration: none;
 }
 
@@ -50,7 +62,7 @@ nav a {
 }
 
 .eyebrow {
-    color: #b45f38;
+    color: var(--text-secondary);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -71,7 +83,7 @@ h1 {
 }
 
 .button {
-    background: #b45f38;
+    background: var(--text-secondary);
     color: #fffaf0;
     display: inline-block;
     padding: 0.9rem 1.25rem;
