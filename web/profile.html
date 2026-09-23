@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
     <body>
-    <div class="layout">
-    <header class="site-header">
-        <a class="site-logo" href="index.html">TradeTree</a>
-        <nav aria-label="Main navigation">
-            <a href="#marketplace">Marketplace</a>
-            <a href="#about">About</a>
-            <a href="#login">Log in</a>
-        </nav>
-    </header>
-    <aside class="left-sidebar">
-        <div class="sidebar-section">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quasi odio nam, nemo sed itaque vitae hic ea eligendi magni odit aspernatur, aliquid ipsa quidem perferendis tenetur dicta recusandae veniam.</p>
+        <div class="layout">
+            <header class="site-header">
+                <a class="site-logo" href="index.html">TradeTree</a>
+                <nav aria-label="Main navigation">
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="login.html">Log in</a>
+                </nav>
+            </header>
+            <aside class="left-sidebar">
+                <div class="sidebar-section">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quasi odio nam, nemo sed
+                        itaque vitae hic ea eligendi magni odit aspernatur, aliquid ipsa quidem perferendis tenetur
+                        dicta recusandae veniam.</p>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="search-bar">
+                    <search></search>
+                </div>
+                <div class="listing-flexbox">
+                    <!-- 
+        //hard coding the listings in for now, will have a script to upload listing automatically when user lists an item 
+         -->
+                    <div id="listing1">
+                        <div class="listing-layout">
+                            <!--Listing Image on Top-->
+                            <img id="listing-image"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                            <!--Under image shows username of poster, star rating, and a message button to contact about -->
+                            <div class="listing-links">
+                                <button id="username">User1234</button>
+                                <button id="user-rating">Rating</button>
+                                <button id="message-user">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+
+
+
+
+
+
+
+
+
+
+
+            <footer class="site-footer">
+                <p>&copy; 2026 TradeTree</p>
+            </footer>
         </div>
-    </aside>
 
-<main class="content">
-    
-</main>
+    </body>
 
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="site-footer">
-        <p>&copy; 2026 TradeTree</p>
-    </footer>
-    </div>
-    
-</body>
 </html>
