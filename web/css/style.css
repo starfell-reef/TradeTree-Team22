@@ -10,8 +10,9 @@
     --color-primary: #495D63;
     --color-secondary: #037971;
     --color-light: #f4f0e8;
+    --color-medium: #ebe4d6;
     --color-info: #D7BCC8;
-    --color-muted: rgb(8, 78, 73); 
+    --color-muted: #084e49; 
     --color-warning: #fb7784;
     --color-success: #b1d9b6;
     --color-logo: #C4EBE0;
@@ -51,6 +52,7 @@ body {
 
 a {
     text-decoration: underline;
+    color: var(--color-secondary)
 }
 
 a,
@@ -85,22 +87,19 @@ body {
 /* HEADER */
 /* ------------------ */
 
-.site-header,
-.site-footer {
+.site-header {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 1.25rem 8vw;
-}
-
-.site-header {
+    background: var(--color-medium);
     border-bottom: var(--border);
     border-color: var(--color-muted);
 }
 
-.site-header img {
-    width: 5%;
-    height: auto;
+.site-image {
+    width: 60px;
+    height: 60px;
 }
 
 .site-logo {
@@ -162,6 +161,9 @@ footer {
     border-top: var(--border);
     border-color: var(--color-muted);
     font-size: 0.9rem;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-medium);
 }
 
 .footer-content {
@@ -179,6 +181,66 @@ nav {
 
 nav a {
     text-decoration: none;
+}
+
+nav ul {
+    margin: 0 -5px;
+    padding: 0;
+    list-style: none;
+    user-select: none;
+}
+
+nav ul li {
+    margin-bottom: 0;
+}
+
+nav>ul li>a,
+nav>ul li>strong {
+    display: inline-block;
+}
+
+nav>ul li>a,
+nav>ul li>details summary,
+nav>ul li>strong {
+    padding: 5px 10px;
+}
+
+nav>ul li>a.active,
+nav>ul li>details.active summary {
+    font-weight: bold;
+}
+
+nav ul summary {
+    cursor: pointer;
+}
+
+nav ul ul li>a {
+    padding-left: 30px;
+}
+
+/* header nav */
+
+header nav {
+    margin-bottom: 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li:first-child>a {
+    padding-left: 0;
+}
+
+header nav ul li:last-child>a {
+    padding-right: 0;
 }
 
 /* ------------------ */
@@ -224,6 +286,10 @@ h1 {
     display: inline-block;
     padding: 0.9rem 1.25rem;
     text-decoration: none;
+}
+
+.button:hover {
+    color: var(--color-medium);
 }
 
 
