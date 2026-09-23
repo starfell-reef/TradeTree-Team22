@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,68 +10,82 @@
 
 <body>
     <div class="layout">
-    <header class="site-header">
-        <a class="site-logo" href="index.html">TradeTree</a>
-        <nav aria-label="Main navigation">
-            <a href="marketplace.html">Marketplace</a>
-            <a href="about.html">About</a>
-            <a href="login.html">Log in</a>
-        </nav>
-    </header>
+        <header class="site-header">
+            <div class="site-brand" aria-label="TradeTree home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <a class="site-logo" href="index.html">TradeTree</a>
+            </div>
+            <nav aria-label="Main navigation">
+                <a href="marketplace.html">Marketplace</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Log in</a>
+            </nav>
+        </header>
 
+        <main class="page-shell">
+            <aside class="left-sidebar" aria-label="Profile sidebar">
+                <div class="profile-block">
+                    <div class="profile-avatar" aria-hidden="true"></div>
+                    <div class="display-name">display name</div>
+                    <div class="username">@username</div>
+                </div>
 
-    <aside class="left-sidebar">
-        <div class="sidebar-section">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quasi odio nam, nemo sed itaque vitae hic ea eligendi magni odit aspernatur, aliquid ipsa quidem perferendis tenetur dicta recusandae veniam.</p>
-        </div>
-    </aside>
+                <nav class="sidebar-nav" aria-label="Sidebar navigation">
+                    <a href="#">New listing</a>
+                    <a href="#">Your listings</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Following</a>
+                    <a href="#">Messages</a>
+                </nav>
 
-<main class="content">
-     <div class="search-bar">
-        <search><input type="search" name="" id=""></search>
-    </div>
-    <div class="listing-flexbox">
-        <!-- 
-        //hard coding the listings in for now, will have a script to upload listing automatically when user lists an item 
-         -->
-        <div id="listing1">
-                <div class="listing-layout">
-                    <!--Listing Image on Top-->
-                    <img id="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
-                    <!--Under image shows username of poster, star rating, and a message button to contact about -->
-                    <div class="listing-links">
-                        <button id="username">User1234</button>
-                        <button id="user-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </button>
-                        <button id="message-user">Message</button>
+                <div class="sidebar-settings">
+                    <a href="#">Settings</a>
+                </div>
+            </aside>
+
+            <section class="content-panel" aria-label="Marketplace listings">
+                <div class="search-header">
+                    <h1>Search Listings</h1>
+                    <div class="search-bar">
+                        <search aria-label="Search listings">
+                            <input type="search" name="listing-search" id="listing-search" aria-label="Search listings input">
+                        </search>
                     </div>
                 </div>
-        </div>
-    </div>
-    
-</main>
 
+                <div class="listing-grid">
+                    <article class="listing-card featured-listing" id="listing1">
+                        <div class="listing-layout">
+                            <img id="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Listing image">
+                            <div class="listing-links">
+                                <button id="username" type="button">@user</button>
+                                <button id="user-rating" type="button" aria-label="User rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </button>
+                                <button id="message-user" type="button">Message</button>
+                            </div>
+                        </div>
+                    </article>
 
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                    <article class="listing-card" aria-label="Listing placeholder"></article>
+                </div>
+            </section>
+        </main>
 
-
-
-
-
-
-
-
-
-
-    <footer class="site-footer">
+        <footer class="site-footer">
         <p>&copy; 2026 TradeTree</p>
     </footer>
     </div>
-
 </body>
 
 </html>
