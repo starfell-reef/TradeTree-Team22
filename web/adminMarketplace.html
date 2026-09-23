@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeTree | Marketplace</title>
-    <script src="https://kit.fontawesome.com/efba67cbe9.js" crossorigin="anonymous"></script>
+    <title>TradeTree | Admin Marketplace</title>
 </head>
 
 <body>
@@ -16,28 +15,26 @@
                 <a class="site-logo" href="index.html">TradeTree</a>
             </div>
             <nav aria-label="Main navigation">
-                <a href="marketplace.html">Marketplace</a>
+                <a href="adminMarketplace.html">Marketplace</a>
                 <a href="about.html">About</a>
                 <a href="login.html">Log in</a>
             </nav>
         </header>
 
         <main class="page-shell">
-            <aside class="left-sidebar" aria-label="Profile sidebar">
+            <aside class="left-sidebar" aria-label="Admin profile sidebar">
                 <div class="profile-block">
                     <div class="profile-avatar" aria-hidden="true"></div>
-                    <div class="display-name">display name</div>
-                    <div class="username">@username</div>
+                    <div class="display-name">admin profile</div>
+                    <div class="username">@admin</div>
                 </div>
 
                 <nav class="sidebar-nav" aria-label="Sidebar navigation">
+                    <a href="adminProfile.html">Profile</a>
                     <a href="new-listing.html">New listing</a>
-                    <a href="#">Your listings</a>
                     <a href="marketplace.html">Marketplace</a>
                     <a href="#">Following</a>
-                    <a href="conversations.html">Messages</a>
-                    <a href="myReports.html">My Reports</a>
-                    <a href="adminMarketplace.html">Admins</a>
+                    <a href="tickets.html">Tickets</a>
                 </nav>
 
                 <div class="sidebar-settings">
@@ -45,18 +42,13 @@
                 </div>
             </aside>
 
-            <section class="content-panel" aria-label="Marketplace listings">
+            <section class="content-panel" aria-label="Admin marketplace listings">
                 <div class="search-header">
                     <h1>Search Listings</h1>
                     <div class="search-bar">
                         <search aria-label="Search listings">
                             <input type="search" name="listing-search" id="listing-search" aria-label="Search listings input">
                         </search>
-                    </div>
-
-                    <div class="zip-search-bar">
-                        <label for="zip-search">Zip code</label>
-                        <input type="text" id="zip-search" name="zip-search" inputmode="numeric" pattern="[0-9]*" placeholder="Enter ZIP code" aria-label="Search by ZIP code">
                     </div>
                 </div>
 
@@ -73,12 +65,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </button>
+                                <a href="report.html" id="report-listing" role="button">Report</a>
                                 <a href="messages.html" id="message-user" role="button">Message</a>
+                                <a href="#" id="admin-edit-listing" role="button">Edit</a>
+                                <a href="#" id="admin-remove-listing" role="button">Remove</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="listing-card" aria-label="Listing placeholder"></article>
                     <article class="listing-card" aria-label="Listing placeholder"></article>
                     <article class="listing-card" aria-label="Listing placeholder"></article>
                     <article class="listing-card" aria-label="Listing placeholder"></article>
