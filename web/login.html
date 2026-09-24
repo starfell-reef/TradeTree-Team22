@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeTree | Login</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-logo" href="index.html">TradeTree</a>
+        <nav aria-label="Main navigation">
+            <a href="marketplace.html">Marketplace</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Log in</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-panel" aria-label="Sign in">
+            <h2 id="sign-in-header">Sign In</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+
+                <button type="submit">Sign In</button>
+            </form>
+
+            <p>If you do not have a profile, create one below.</p>
+            <button type="button" id="open-create-profile">Create a Profile</button>
+        </section>
+    </main>
+
+    <div id="create-profile-modal" aria-hidden="true">
+        <div role="dialog" aria-modal="true" aria-labelledby="create-profile-title">
+            <h3 id="create-profile-title">Create a Profile</h3>
+            <form action="#" method="post">
+                <div>
+                    <label for="new-username">Username</label>
+                    <input type="text" id="new-username" name="new-username" placeholder="Choose a username">
+                </div>
+
+                <div>
+                    <label for="new-password">Password</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="Choose a password">
+                </div>
+
+                <button type="submit">Create Profile</button>
+                <button type="button" id="close-create-profile">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TradeTree</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

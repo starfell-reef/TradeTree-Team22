@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeTree | New Listing</title>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="site-header">
+            <div class="site-brand" aria-label="TradeTree home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <a class="site-logo" href="index.html">TradeTree</a>
+            </div>
+            <nav aria-label="Main navigation">
+                <a href="marketplace.html">Marketplace</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Log in</a>
+            </nav>
+        </header>
+
+        <main class="page-shell">
+            <aside class="left-sidebar" aria-label="Profile sidebar">
+                <div class="profile-block">
+                    <div class="profile-avatar" aria-hidden="true"></div>
+                    <div class="display-name">display name</div>
+                    <div class="username">@username</div>
+                </div>
+
+                <nav class="sidebar-nav" aria-label="Sidebar navigation">
+                    <a href="new-listing.html">New listing</a>
+                    <a href="#">Your listings</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="#">Following</a>
+                    <a href="conversations.html">Messages</a>
+                    <a href="myReports.html">My Reports</a>
+                </nav>
+
+                <div class="sidebar-settings">
+                    <a href="#">Settings</a>
+                </div>
+            </aside>
+
+            <section class="content-panel" aria-label="Create a new listing">
+                <div class="form-header">
+                    <h1>New Listing</h1>
+                </div>
+
+                <form class="new-listing-form" action="marketplace.html" method="post">
+                    <div class="image-upload-area">
+                        <label for="listing-images">Add images of the item</label>
+                        <input type="file" id="listing-images" name="listing-images" multiple accept="image/*">
+                    </div>
+
+                    <div class="description-area">
+                        <label for="listing-description">Description</label>
+                        <textarea id="listing-description" name="listing-description" rows="10" placeholder="Describe the item you want to list"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit">List It</button>
+                        <a href="marketplace.html" role="button">Cancel</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+        <p>&copy; 2026 TradeTree</p>
+    </footer>
+    </div>
+</body>
+
+</html>
