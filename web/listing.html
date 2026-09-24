@@ -12,69 +12,97 @@
 <body>
     <div class="layout">
         <header class="site-header">
-            <div class="site-brand" aria-label="TradeTree home">
-                <span class="brand-mark" aria-hidden="true"></span>
-                <a class="site-logo" href="index.html">TradeTree</a>
+            <div class="header-content">
+                <a class="site-logo" href="index.html"><img src="images/logo.png" class="site-image"> TradeTree</a>
             </div>
-            <nav aria-label="Main navigation">
-                <a href="marketplace.html">Marketplace</a>
-                <a href="about.html">About</a>
-                <a href="login.html">Log in</a>
-            </nav>
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <main class="page-shell">
-            <aside class="left-sidebar" aria-label="Profile sidebar">
-                <div class="profile-block">
-                    <div class="profile-avatar" aria-hidden="true"></div>
-                    <div class="display-name">listing user</div>
+        <aside class="left-sidebar">
+            <a href="profile.html" id="profile">
+                <div class="sidebar-section">
+                    <div class="profile-avatar"><img src="images/logo.png"></div>
+                    <div class="display-name">display name</div>
                     <div class="username">@username</div>
+                    <hr>
                 </div>
+            </a>
 
-                <nav class="sidebar-nav" aria-label="Sidebar navigation">
-                    <a href="new-listing.html">New listing</a>
-                    <a href="#">Your listings</a>
-                    <a href="marketplace.html">Marketplace</a>
-                    <a href="#">Following</a>
-                    <a href="conversations.html">Messages</a>
+            <div class="sidebar-section">
+                <nav>
+                    <ul>
+                        <li><a href="new-listing.html">New listing</a></li>
+                        <li><a href="#">Your listings</a></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="#">Following</a></li>
+                        <li><a href="conversations.html">Messages</a></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li><a href="myReports.html">My Reports</a></li>
+                        <li><a href="adminMarketplace.html">Admins</a></li>
+                    </ul>
                 </nav>
+            </div>
 
-                <div class="sidebar-settings">
-                    <a href="#">Settings</a>
-                </div>
-            </aside>
-
-            <section class="content-panel" aria-label="Listing details">
+            <div class="sidebar-section">
+                <nav>
+                    <ul>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <main class="content">
+            <section>
                 <div class="search-header">
                     <h1>Search Listings</h1>
                     <div class="search-bar">
                         <search aria-label="Search listings">
-                            <input type="search" name="listing-search" id="listing-search" aria-label="Search listings input">
+                            <input type="search" name="listing-search" id="listing-search"
+                                placeholder="Search marketplace . . .">
                         </search>
                     </div>
                 </div>
+            </section>
 
-                <div class="listing-gallery" aria-label="Listing gallery">
-                    <article class="gallery-image" aria-label="Item image one"></article>
-                    <article class="gallery-image" aria-label="Item image two"></article>
-                    <article class="gallery-image" aria-label="Item image three"></article>
+            <section>
+                <div class="listing-gallery">
+                    <div class="gallery-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                    </div>
                 </div>
 
                 <div class="listing-detail-box">
-                    <div class="listing-title">Listing title</div>
+                    <div class="listing-title"><h2>Listing title</h2></div>
+
+                    <div class="listing-description">Listing description. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ipsum voluptatem eaque similique nihil ad ex, blanditiis assumenda explicabo animi corrupti! Quos nemo at fugit magni velit possimus officiis? Reiciendis?</div>
                 </div>
 
-                <div class="listing-description-box">
-                    <div class="listing-description">Listing description</div>
-                </div>
-
-                <button type="button" class="message-button">Message</button>
+                <button type="button" class="message-button"><a href="messages.html">Message about item</a></button>
             </section>
         </main>
 
         <footer class="site-footer">
-        <p>&copy; 2026 TradeTree</p>
-    </footer>
+            <p>&copy; 2026 TradeTree</p>
+        </footer>
     </div>
 </body>
 

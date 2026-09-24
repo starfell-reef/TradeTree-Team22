@@ -14,8 +14,10 @@
     --color-info: #D7BCC8;
     --color-muted: #084e49; 
     --color-warning: #fb7784;
+    --color-warning-hover: #c14c58; 
     --color-success: #b1d9b6;
     --color-logo: #C4EBE0;
+    --color-pastel: #F9D999;
 
     /* margin and padding */
     --margin: 10px;
@@ -34,14 +36,13 @@
 /* BASICS */
 /* ------------------ */
 
-* {
-    box-sizing: border-box;
-}
-
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     min-width: 320px;
-    background: var(--color-light);
+    background: var(--color-medium);
 }
 
 ::selection {
@@ -73,14 +74,21 @@ a:focus {
 .layout {
     width: 100%;
     display: grid;
-    grid-gap: var(--margin);
     grid-template: "header header" auto "leftSidebar main" auto "footer footer" auto / var(--sidebar-width) auto;
 }
 
-body {
+.layout-index {
+    width: 100%;
+    display: grid;
+    grid-template: "header header" auto "main main" auto "footer footer" auto;
+}
+
+main {
     grid-area: main;
     overflow-y: auto;
     background: var(--color-light);
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 /* ------------------ */
@@ -88,6 +96,7 @@ body {
 /* ------------------ */
 
 .site-header {
+    grid-area: header;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -115,6 +124,8 @@ body {
 
 aside {
     grid-area: aside;
+    display: block;
+    justify-content: center;
     border-right: var(--border);
     border-color: var(--color-muted);
     overflow: hidden;
@@ -150,6 +161,29 @@ aside {
     margin: 16px 0;
     border-radius: var(--curve);
     overflow: hidden;
+}
+
+/* sidebar profile */
+
+#profile {
+    display: block;
+    justify-self: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.profile-avatar img {
+    width: 125px;
+    height: 125px;
+}
+
+.display-name {
+    font-weight: bold;
+}
+
+.username {
+    font-weight: light;
+    font-size: 14px;
 }
 
 /* ------------------ */
@@ -247,9 +281,8 @@ header nav ul li:last-child>a {
 /* CONTENT */
 /* ------------------ */
 
-main {
-    line-height: 1.5;
-    font-size: 18px;
+.content {
+    padding: var(--padding);
 }
 
 .hero {
@@ -265,12 +298,6 @@ main {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-}
-
-h1 {
-    font-size: clamp(2.75rem, 8vw, 6rem);
-    line-height: 0.98;
-    margin: 1rem 0;
 }
 
 .hero p:not(.eyebrow) {
@@ -290,8 +317,374 @@ h1 {
 
 .button:hover {
     color: var(--color-medium);
+    background: var(--color-muted);
 }
 
+/* HEADINGS: */
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+    font-family: var(--font-fam);
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: var(--color-secondary);
+}
+
+main h1:first-child,
+main h2:first-child,
+main h3:first-child,
+main h4:first-child,
+main h5:first-child,
+main h6:first-child {
+    margin-top: 0;
+}
+
+/* MARKETPLACE SEARCH */
+
+.search-header {
+    display: flex;
+    justify-content: right;
+    padding: var(--margin);
+    background-color: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+}
+
+.search-header h1 {
+    font-size: 20px;
+}
+
+.search-bar {
+    padding-left: var(--margin);
+    padding-right: var(--padding);
+}
+
+.zip-search-bar {
+    padding-right: var(--margin);
+}
+
+/* MARKETPLACE LISTINGS */
+
+.listing-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+    width: 100%;
+}
+
+.listing-card {
+    display: block;
+    justify-content: center;
+    background: var(--color-info);
+    border: var(--border);
+    border-color: var(--color-muted);
+    margin: var(--margin);
+}
+
+.listing-image {
+    width: 100%;
+    height: auto;
+}
+
+.listing-links {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+.username {
+    font-size: 20px;
+    padding: var(--margin);
+    margin: var(--margin);
+}
+
+.message-user {
+    padding: var(--margin);
+    margin: var(--margin);
+    background: var(--color-logo);
+    border: var(--border);
+    border-color: var(--color-muted);
+    color: var(--color-primary);
+}
+
+.message-user:hover {
+    padding: var(--margin);
+    margin: var(--margin);
+    background: var(--color-success);
+    color: var(--color-muted);
+    border: var(--border);
+    border-color: var(--color-muted);
+}
+
+.user-rating {
+    background: var(--color-secondary);
+    color: var(--color-pastel);
+    border: none;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
+.user-rating:hover {
+    background-color: var(--color-muted);
+    color: var(--color-success);
+}
+
+/* LOG IN PAGE */
+
+.login-panel {
+    text-align: center;
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.sign-up-panel {
+    text-align: center;
+    padding: var(--padding);
+}
+
+/* NEW LISTING */
+
+.new-listing-form {
+    display: block;
+    align-items: center;
+    justify-content: left;
+    background: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+}
+
+label {
+    margin-right: var(--margin);
+}
+
+.image-upload-area {
+    padding: var(--padding);
+}
+
+.description-area {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#listing-description {
+    background: var(--color-light);
+    margin: var(--margin);
+    padding: var(--margin);
+    color: var(--color-primary)
+}
+
+.form-actions {
+    padding: var(--margin);
+}
+
+#list-it {
+    background: var(--color-success);
+    color: var(--color-primary);
+    border: var(--border);
+    border-color: var(--color-info);
+    padding: 5px;
+    font-size: 20px;
+}
+
+#list-it:hover {
+    background: var(--color-secondary);
+    color: var(--color-muted);
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: var(--color-warning);
+    color: var(--color-primary);
+    font-size: 20px;
+    border: var(--border);
+    border-color: var(--color-info);
+    padding: 5px;
+    text-decoration: none;
+}
+
+.cancel-button:hover {
+    background-color: var(--color-warning-hover);
+    color: var(--color-muted);
+}
+
+/* MESSAGES */
+
+.messages-list {
+    list-style: none;
+}
+
+.messages-list li {
+    display: flex;
+    align-items: center;
+    margin: var(--margin);
+}
+
+.message-user-btn {
+    border: var(--border);
+    border-color: var(--color-muted);
+    background: var(--color-medium);
+    color: var(--color-primary);
+    padding: var(--margin);
+}
+
+.message-user-btn:hover {
+    background: var(--color-muted);
+    color: var(--color-info);
+}
+
+.active {
+    background: var(--color-success);
+}
+
+.chat-header {
+    background: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+    padding: var(--margin);
+}
+
+.chat-thread {
+    background: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+    padding: var(--margin);
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+.message {
+    border: none;
+    padding: var(--margin);
+    width: 100%;
+}
+
+.incoming {
+    background: var(--color-light);
+}
+
+.outgoing {
+    background: var(--color-medium);
+}
+
+.chat-input-area {
+    background: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+    padding: var(--margin);
+}
+
+#message-text {
+    background: var(--color-light);
+    color: var(--color-muted);
+    width: 85%;
+}
+
+.sendbtn {
+    background: var(--color-success);
+    color: var(--color-muted);
+    width: 12%;
+    margin-left: var(--margin);
+}
+
+/* LISTING PAGE */
+
+.listing-gallery {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.gallery-image {
+    border: var(--border);
+    border-color: var(--color-muted);
+    margin: var(--padding);
+}
+
+.listing-detail-box {
+    background: var(--color-medium);
+    margin: var(--padding);
+    border: var(--border);
+    border-color: var(--color-muted);
+}
+
+.listing-description {
+    color: var(--color-primary);
+}
+
+.message-button {
+    border: var(--border);
+    border-color: var(--color-muted);
+    background: var(--color-medium);
+    padding: var(--margin);
+}
+
+.message-button a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.message-button:hover {
+    background: var(--color-muted);
+}
+
+.message-button a:hover {
+    color: var(--color-info);
+}
+
+/* ADMIN PAGES */
+
+#admin-edit-listing, 
+#admin-remove-listing {
+    color: var(--color-warning);
+    background: var(--color-medium);
+    border: var(--border);
+    border-color: var(--color-muted);
+    padding: var(--margin);
+    margin: var(--margin);
+}
+
+#admin-edit-listing:hover, 
+#admin-remove-listing:hover {
+    background: var(--color-light);
+    color: var(--color-warning-hover);
+}
+
+/* PROFILE PAGE */
+
+.profile-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-user-profile {
+    padding: var(--margin);
+    margin: var(--margin);
+    background: var(--color-logo);
+    border: var(--border);
+    border-color: var(--color-muted);
+    color: var(--color-primary);
+    width: 95%;
+    text-align: center;
+}
+
+.message-user-profile:hover {
+    padding: var(--margin);
+    margin: var(--margin);
+    background: var(--color-success);
+    color: var(--color-muted);
+    border: var(--border);
+    border-color: var(--color-muted);
+}
 
 @media (max-width: 600px) {
     .site-header {
