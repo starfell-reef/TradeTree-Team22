@@ -5,46 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradeTree | Messages</title>
+    <script src="https://kit.fontawesome.com/efba67cbe9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="layout">
         <header class="site-header">
-            <div class="site-brand" aria-label="TradeTree home">
-                <span class="brand-mark" aria-hidden="true"></span>
-                <a class="site-logo" href="index.html">TradeTree</a>
+            <div class="header-content">
+                <a class="site-logo" href="index.html"><img src="images/logo.png" class="site-image"> TradeTree</a>
             </div>
-            <nav aria-label="Main navigation">
-                <a href="marketplace.html">Marketplace</a>
-                <a href="about.html">About</a>
-                <a href="login.html">Log in</a>
-            </nav>
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <main class="page-shell">
-            <aside class="left-sidebar" aria-label="Messages sidebar">
-                <div class="messages-list">
-                    <div class="sidebar-title">Messages</div>
-                    <a href="conversations.html" class="message-user active">user1</a>
-                    <a href="conversations.html" class="message-user">user2</a>
-                    <a href="conversations.html" class="message-user">user3</a>
-                    <a href="conversations.html" class="message-user">user4</a>
-                </div>
+        <aside class="left-sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Messages</div>
+                <ul class="messages-list">
+                    <li><a href="conversations.html" class="message-user-btn active">user1</a></li>
+                    <li><a href="conversations.html" class="message-user-btn">user2</a></li>
+                    <li><a href="conversations.html" class="message-user-btn">user3</a></li>
+                    <li><a href="conversations.html" class="message-user-btn">user4</a></li>
+                </ul>
+            </div>
 
-                <div class="sidebar-settings">
-                    <a href="#">Settings</a>
-                </div>
-            </aside>
+            <div class="sidebar-settings">
+                <a href="#">Settings</a>
+            </div>
+        </aside>
 
-            <section class="content-panel" aria-label="Message thread">
+        <main class="content">
+            <section>
                 <div class="chat-header">
                     <a href="listing.html" class="chat-user" aria-label="Open listing">@user1 private message</a>
                     <a href="listing.html" class="chat-image-link" aria-label="Open original posting">
                         <span class="chat-image" aria-hidden="true"></span>
                     </a>
                 </div>
+            </section> 
 
-                <div class="chat-thread" aria-label="Message thread content">
+            <section>
+                <div class="chat-thread">
                     <div class="message incoming">
                         <div class="message-bubble">Hello! Is this still available?</div>
                     </div>
@@ -59,16 +68,15 @@
                 </div>
 
                 <form class="chat-input-area" action="#" method="post">
-                    <label for="message-text" class="sr-only">Message here</label>
                     <input type="text" id="message-text" name="message-text" placeholder="Message here">
-                    <button type="submit">Send</button>
+                    <button type="submit" class="sendbtn">Send</button>
                 </form>
             </section>
         </main>
 
         <footer class="site-footer">
-        <p>&copy; 2026 TradeTree</p>
-    </footer>
+            <p>&copy; 2026 TradeTree</p>
+        </footer>
     </div>
 </body>
 
