@@ -448,6 +448,54 @@ main h6:first-child {
     padding: var(--padding);
 }
 
+/* CREATE PROFILE MODAL */
+
+.profile-modal:not([hidden]) {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    padding: var(--padding);
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.profile-dialog {
+    width: 90%;
+    max-width: 28rem;
+    padding: var(--padding);
+    background: var(--color-light);
+    border: var(--border);
+    border-color: var(--color-muted);
+    text-align: left;
+}
+
+.profile-dialog form > div,
+.login-panel form > div {
+    display: grid;
+    margin: var(--margin);
+}
+
+.profile-dialog input,
+.login-panel input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--margin);
+}
+
+#auth-status,
+#create-profile-status {
+    min-height: 1.5em;
+}
+
+[data-status="error"] {
+    color: var(--color-warning-hover);
+}
+
+[data-status="success"] {
+    color: var(--color-secondary);
+}
+
 /* NEW LISTING */
 
 .new-listing-form {
