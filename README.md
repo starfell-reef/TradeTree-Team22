@@ -26,6 +26,8 @@ A website that allows users to create an account to trade with other users. Thes
     3. Moderate reviews - If a user feels that they were left a bad review and do not deserve it, they can reach out to admins to look into it. Admins will reach out to the person who left the review and ask why, and will then read back all the chat logs to see if both sides of the story are true. If it is found the review was left in place of malice, the admins will be able to remove it and issue infractions on the other who left said review.
     4. View usage statistics - There will be a data list that gets sent to the admins that show how many postings were made, how many new users were created, and how many of the postings created were successfully completed. Based on this data, we can try to make changes to better support the users to influence more traffic or do more to reach new users via advertising changes made.
 
+Live Render URL:
+https://tradetree-team22.onrender.com
 ## Backend user profiles and sign-in
 The backend checks sign-in credentials against the database and returns the public profile on success. Passwords are stored as PBKDF2 hashes, and duplicate usernames or emails are rejected.
 
