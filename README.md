@@ -28,3 +28,6 @@ A website that allows users to create an account to trade with other users. Thes
 
 ## Backend user profiles and sign-in
 The backend checks sign-in credentials against the database and returns the public profile on success. Passwords are stored as PBKDF2 hashes, and duplicate usernames or emails are rejected.
+
+## Admin analytics
+Keeps track of how many accounts are created, and how many of those accounts sign in. The admins are then able to generate a report to view the statistics of this information. 

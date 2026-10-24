@@ -26,7 +26,8 @@ public class UserProfileController {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public UserProfileResponse create(@Valid @RequestBody CreateUserProfileRequest request) {
-		UserProfile profile = service.create(request.username(), request.email(), request.password());
+		UserProfile profile = service.create(
+				request.username(), request.name(), request.email(), request.password());
 		return new UserProfileResponse(profile.getId(), profile.getUsername(), profile.getEmail());
 	}
 
@@ -41,6 +42,7 @@ public class UserProfileController {
 					@Size(min = 3, max = 30)
 					@Pattern(regexp = "^[A-Za-z0-9_]+$", message = "Username may use letters, numbers, and underscores.")
 					String username,
+			@NotBlank @Size(max = 100) String name,
 			@NotBlank @Email @Size(max = 254) String email,
 			@NotBlank @Size(min = 8, max = 128) String password) {
 	}
