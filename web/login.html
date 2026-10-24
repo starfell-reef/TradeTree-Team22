@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="api-base-url" content="http://localhost:8080">
     <title>TradeTree | Login</title>
     <script src="https://kit.fontawesome.com/efba67cbe9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -29,39 +30,60 @@
         <main>
             <section class="login-panel">
                 <h2 id="sign-in-header">Sign In</h2>
-                <form action="#" method="post">
+                <p id="auth-status" role="status" aria-live="polite"></p>
+                <form id="login-form">
                     <div>
                         <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username">
+                        <input type="text" id="username" name="username" placeholder="Enter your username"
+                            autocomplete="username" required maxlength="30">
                     </div>
 
                     <div>
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" maxlength="128" required>
                     </div>
 
                     <button type="submit">Sign In</button>
                 </form>
 
-                <p>If you do not have a profile, create one below.</p>
-                <button type="button" id="open-create-profile">Create a Profile</button>
+                <div id="create-profile-prompt">
+                    <p>If you do not have a profile, create one below.</p>
+                    <button type="button" id="open-create-profile">Create a Profile</button>
+                </div>
             </section>
 
             <section class="sign-up-panel">
-                <div id="create-profile-modal" hidden="true">
-                    <div role="dialog">
+                <div id="create-profile-modal" class="profile-modal" hidden>
+                    <div class="profile-dialog" role="dialog" aria-modal="true"
+                        aria-labelledby="create-profile-title">
                         <h3 id="create-profile-title">Create a Profile</h3>
-                        <form action="#" method="post">
+                        <p id="create-profile-status" role="status" aria-live="polite"></p>
+                        <form id="create-profile-form">
                             <div>
                                 <label for="new-username">Username</label>
                                 <input type="text" id="new-username" name="new-username"
-                                    placeholder="Choose a username">
+                                    placeholder="Choose a username" autocomplete="username" minlength="3"
+                                    maxlength="30" pattern="[A-Za-z0-9_]+" required>
+                            </div>
+
+                            <div>
+                                <label for="new-name">Name</label>
+                                <input type="text" id="new-name" name="new-name"
+                                    placeholder="Enter your name" autocomplete="name" maxlength="100" required>
+                            </div>
+
+                            <div>
+                                <label for="new-email">Email</label>
+                                <input type="email" id="new-email" name="new-email" placeholder="Enter your email"
+                                    autocomplete="email" maxlength="254" required>
                             </div>
 
                             <div>
                                 <label for="new-password">Password</label>
                                 <input type="password" id="new-password" name="new-password"
-                                    placeholder="Choose a password">
+                                    placeholder="Choose a password" autocomplete="new-password" minlength="8"
+                                    maxlength="128" required>
                             </div>
 
                             <button type="submit">Create Profile</button>

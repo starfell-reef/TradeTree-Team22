@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="api-base-url" content="http://localhost:8080">
+    <title>TradeTree | Admin Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="site-header">
+            <div class="header-content">
+                <a class="site-logo" href="index.html">TradeTree | Admin analytics</a>
+            </div>
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="adminProfile.html">Admin profile</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="content-panel">
+                <h1>Account analytics</h1>
+                <p>Sign in with an admin account to view account creation and active-user totals.</p>
+
+                <section class="analytics-login" aria-label="Admin authentication">
+                    <form id="analytics-login-form">
+                        <div>
+                            <label for="admin-username">Admin username</label>
+                            <input type="text" id="admin-username" autocomplete="username" maxlength="30" required>
+                        </div>
+                        <div>
+                            <label for="admin-password">Admin password</label>
+                            <input type="password" id="admin-password" autocomplete="current-password"
+                                maxlength="128" required>
+                        </div>
+                        <button type="submit">View analytics</button>
+                    </form>
+                    <p id="analytics-status" role="status" aria-live="polite"></p>
+                </section>
+
+                <section id="analytics-results" aria-label="Account statistics" hidden>
+                    <p>Active users are distinct accounts that successfully signed in during each period.
+                        Periods use the current UTC calendar week, month, and year. Account creation totals
+                        include registrations recorded since analytics tracking was enabled; older accounts
+                        have no historical creation events.</p>
+                    <div class="analytics-grid">
+                        <article class="analytics-card">
+                            <h2>This week</h2>
+                            <p>Date range: <span id="week-dates"></span></p>
+                            <p>Accounts created: <strong id="week-accounts">0</strong></p>
+                            <p>Active users: <strong id="week-active">0</strong></p>
+                        </article>
+                        <article class="analytics-card">
+                            <h2>This month</h2>
+                            <p>Date range: <span id="month-dates"></span></p>
+                            <p>Accounts created: <strong id="month-accounts">0</strong></p>
+                            <p>Active users: <strong id="month-active">0</strong></p>
+                        </article>
+                        <article class="analytics-card">
+                            <h2>This year</h2>
+                            <p>Date range: <span id="year-dates"></span></p>
+                            <p>Accounts created: <strong id="year-accounts">0</strong></p>
+                            <p>Active users: <strong id="year-active">0</strong></p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 TradeTree</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
