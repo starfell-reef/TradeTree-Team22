@@ -32,4 +32,19 @@ https://tradetree-team22.onrender.com
 The backend checks sign-in credentials against the database and returns the public profile on success. Passwords are stored as PBKDF2 hashes, and duplicate usernames or emails are rejected.
 
 ## Admin analytics
-Keeps track of how many accounts are created, and how many of those accounts sign in. The admins are then able to generate a report to view the statistics of this information. 
+Keeps track of how many accounts are created, and how many of those accounts sign in. The admins are then able to generate a report to view the statistics of this information.
+
+## Admin access
+Admin pages create a server-side session through `POST /api/admin/session` after verifying the account's credentials and admin role. The session cookie is used to validate access to `GET /api/admin/analytics`; `GET` and `DELETE /api/admin/session` check and end the session. Cross-origin web clients must be included in `CORS_ALLOWED_ORIGINS` for credentialed requests. Regular registrations are not admins and cannot grant themselves admin access.
+
+For local demos, the backend can create one admin account at startup when both `DEMO_ADMIN_USERNAME` and `DEMO_ADMIN_PASSWORD` are set. Use a unique username and a private password of at least 12 characters; do not commit the password or use a shared fixed password on a public deployment. The username must contain 3-30 letters, numbers, or underscores. The password is stored as a PBKDF2 hash. Bootstrap is idempotent: an existing admin account is left unchanged, while an existing regular account with that username causes startup to fail.
+
+In PowerShell, set the values in the terminal before starting the backend:
+
+```powershell
+$env:DEMO_ADMIN_USERNAME = "demo_admin"
+$env:DEMO_ADMIN_PASSWORD = "replace-with-a-private-password-of-12-or-more-characters"
+.\mvnw.cmd spring-boot:run
+```
+
+In a hosted demo, configure those as backend environment variables instead of putting the password in source control. The admin account is created only on first startup against a database where the username is unused.

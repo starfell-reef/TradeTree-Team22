@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-admin-page="true">
     <div class="layout">
         <header class="site-header">
             <div class="header-content">
@@ -40,13 +40,13 @@
                 <nav>
                     <ul>
                         <li><a href="new-listing.html">New listing</a></li>
-                        <li><a href="#">Your listings</a></li>
+                        <li><a href="adminProfile.html">Your listings</a></li>
                         <li>
                             <hr>
                         </li>
                         <li><a href="adminMarketplace.html">Marketplace</a></li>
-                        <li><a href="#">Following</a></li>
-                        <li><a href="messages.htmlZ">Messages</a></li>
+                        <li><span class="nav-unavailable" aria-disabled="true">Following (coming soon)</span></li>
+                        <li><a href="messages.html">Messages</a></li>
                         <li>
                             <hr>
                         </li>
@@ -60,7 +60,7 @@
             <div class="sidebar-section">
                 <nav>
                     <ul>
-                        <li><a href="#">Settings</a></li>
+                        <li><span class="nav-unavailable" aria-disabled="true">Settings (coming soon)</span></li>
                     </ul>
                 </nav>
             </div>
@@ -93,8 +93,10 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
 
@@ -112,12 +114,14 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                     <div class="listing-card">
-                        <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                        <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                         <div class="listing-links">
                             <a href="profile.html" class="username" role="button">@user</a>
                             <button class="user-rating" type="button">
@@ -128,12 +132,14 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                     <div class="listing-card">
-                        <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                        <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                         <div class="listing-links">
                             <a href="profile.html" class="username" role="button">@user</a>
                             <button class="user-rating" type="button">
@@ -144,8 +150,10 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                     <div class="listing-card">
@@ -162,12 +170,14 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                     <div class="listing-card">
-                        <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                        <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                         <div class="listing-links">
                             <a href="profile.html" class="username" role="button">@user</a>
                             <button class="user-rating" type="button">
@@ -178,12 +188,14 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                     <div class="listing-card">
-                        <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                        <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                         <div class="listing-links">
                             <a href="profile.html" class="username" role="button">@user</a>
                             <button class="user-rating" type="button">
@@ -194,12 +206,14 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                     <div class="listing-card">
-                        <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                        <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                         <div class="listing-links">
                             <a href="profile.html" class="username" role="button">@user</a>
                             <button class="user-rating" type="button">
@@ -210,8 +224,10 @@
                                 <i class="fa-regular fa-star"></i>
                             </button>
                             <a href="messages.html" class="message-user-profile" role="button">Message</a>
-                            <a href="#" id="admin-edit-listing">Edit listing</a>
-                            <a href="#" id="admin-remove-listing">Remove listing</a>
+                            <button type="button" class="admin-edit-listing" disabled
+                                title="Editing is not available in this prototype">Edit listing</button>
+                            <button type="button" class="admin-remove-listing" disabled
+                                title="Removal is not available in this prototype">Remove listing</button>
                         </div>
                     </div>
                 </section>
@@ -221,6 +237,7 @@
             <p>&copy; 2026 TradeTree</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

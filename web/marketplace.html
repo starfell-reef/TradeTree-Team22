@@ -40,12 +40,12 @@
                 <nav>
                     <ul>
                         <li><a href="new-listing.html">New listing</a></li>
-                        <li><a href="#">Your listings</a></li>
+                        <li><a href="profile.html">Your listings</a></li>
                         <li>
                             <hr>
                         </li>
                         <li><a href="marketplace.html">Marketplace</a></li>
-                        <li><a href="#">Following</a></li>
+                        <li><span class="nav-unavailable" aria-disabled="true">Following (coming soon)</span></li>
                         <li><a href="messages.html">Messages</a></li>
                         <li>
                             <hr>
@@ -59,7 +59,7 @@
             <div class="sidebar-section">
                 <nav>
                     <ul>
-                        <li><a href="#">Settings</a></li>
+                        <li><span class="nav-unavailable" aria-disabled="true">Settings (coming soon)</span></li>
                     </ul>
                 </nav>
             </div>
@@ -69,18 +69,22 @@
             <section>
                 <div class="search-header">
                     <h1>Search Listings</h1>
-                    <div class="search-bar">
-                        <search aria-label="Search listings">
-                            <input type="search" name="listing-search" id="listing-search"
-                                placeholder="Search marketplace . . .">
-                        </search>
-                    </div>
+                    <form id="marketplace-search-form" class="marketplace-search-form"
+                        aria-label="Search marketplace listings">
+                        <div class="search-bar">
+                            <search aria-label="Search listings">
+                                <input type="search" name="listing-search" id="listing-search"
+                                    placeholder="Search marketplace . . ." aria-label="Search listings">
+                            </search>
+                        </div>
 
-                    <div class="zip-search-bar">
-                        <label for="zip-search">Zip code</label>
-                        <input type="text" id="zip-search" name="zip-search" inputmode="numeric" pattern="[0-9]*"
-                            placeholder="Enter ZIP code">
-                    </div>
+                        <div class="zip-search-bar">
+                            <label for="zip-search">Zip code</label>
+                            <input type="text" id="zip-search" name="zip-search" inputmode="numeric" pattern="[0-9]*"
+                                placeholder="Enter ZIP code">
+                        </div>
+                        <button type="submit" class="search-submit">Search</button>
+                    </form>
                 </div>
             </section>
 
@@ -119,7 +123,7 @@
                     </div>
                 </div>
                 <div class="listing-card">
-                    <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                    <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                     <div class="listing-links">
                         <a href="profile.html" class="username" role="button">@user</a>
                         <button class="user-rating" type="button">
@@ -133,7 +137,7 @@
                     </div>
                 </div>
                 <div class="listing-card">
-                    <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                    <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                     <div class="listing-links">
                         <a href="profile.html" class="username" role="button">@user</a>
                         <button class="user-rating" type="button">
@@ -163,7 +167,7 @@
                     </div>
                 </div>
                 <div class="listing-card">
-                    <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                    <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                     <div class="listing-links">
                         <a href="profile.html" class="username" role="button">@user</a>
                         <button class="user-rating" type="button">
@@ -177,7 +181,7 @@
                     </div>
                 </div>
                 <div class="listing-card">
-                    <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                    <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                     <div class="listing-links">
                         <a href="profile.html" class="username" role="button">@user</a>
                         <button class="user-rating" type="button">
@@ -191,7 +195,7 @@
                     </div>
                 </div>
                 <div class="listing-card">
-                    <a href="listing.html"><img class="listing-image" src="placeholder" alt="Listing image"></a>
+                    <a href="listing.html"><img class="listing-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10" alt="Example listing image" loading="lazy"></a>
                     <div class="listing-links">
                         <a href="profile.html" class="username" role="button">@user</a>
                         <button class="user-rating" type="button">
@@ -205,12 +209,14 @@
                     </div>
                 </div>
             </section>
+            <p id="marketplace-search-status" class="search-status" role="status" aria-live="polite" hidden></p>
         </main>
 
         <footer class="site-footer">
             <p>&copy; 2026 TradeTree</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-admin-page="true">
     <div class="layout">
         <header class="site-header">
             <div class="header-content">
@@ -29,23 +29,8 @@
         <main class="content">
             <section class="content-panel">
                 <h1>Account analytics</h1>
-                <p>Sign in with an admin account to view account creation and active-user totals.</p>
-
-                <section class="analytics-login" aria-label="Admin authentication">
-                    <form id="analytics-login-form">
-                        <div>
-                            <label for="admin-username">Admin username</label>
-                            <input type="text" id="admin-username" autocomplete="username" maxlength="30" required>
-                        </div>
-                        <div>
-                            <label for="admin-password">Admin password</label>
-                            <input type="password" id="admin-password" autocomplete="current-password"
-                                maxlength="128" required>
-                        </div>
-                        <button type="submit">View analytics</button>
-                    </form>
-                    <p id="analytics-status" role="status" aria-live="polite"></p>
-                </section>
+                <p>Account creation and active-user totals for the TradeTree marketplace.</p>
+                <p id="analytics-status" role="status" aria-live="polite"></p>
 
                 <section id="analytics-results" aria-label="Account statistics" hidden>
                     <p>Active users are distinct accounts that successfully signed in during each period.

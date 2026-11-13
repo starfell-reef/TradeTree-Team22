@@ -20,8 +20,9 @@ public class UserProfileWebConfiguration implements WebMvcConfigurer {
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/api/**")
 				.allowedOrigins(allowedOrigins)
-				.allowedMethods("GET", "POST", "OPTIONS")
+				.allowedMethods("GET", "POST", "DELETE", "OPTIONS")
 				.allowedHeaders("Content-Type")
+				.allowCredentials(true)
 				.maxAge(3600);
 	}
 }

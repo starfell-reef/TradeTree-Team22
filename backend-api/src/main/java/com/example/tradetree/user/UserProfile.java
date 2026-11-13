@@ -80,10 +80,15 @@ public class UserProfile {
 	}
 
 	public UserProfile(String username, String name, String email, String passwordHash) {
+		this(username, name, email, passwordHash, false);
+	}
+
+	public UserProfile(String username, String name, String email, String passwordHash, boolean admin) {
 		this.username = username;
 		this.name = name;
 		this.email = email;
 		this.passwordHash = passwordHash;
+		this.admin = admin;
 	}
 
 	public UUID getId() {

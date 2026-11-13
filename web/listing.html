@@ -40,12 +40,12 @@
                 <nav>
                     <ul>
                         <li><a href="new-listing.html">New listing</a></li>
-                        <li><a href="#">Your listings</a></li>
+                        <li><a href="profile.html">Your listings</a></li>
                         <li>
                             <hr>
                         </li>
                         <li><a href="marketplace.html">Marketplace</a></li>
-                        <li><a href="#">Following</a></li>
+                        <li><span class="nav-unavailable" aria-disabled="true">Following (coming soon)</span></li>
                         <li><a href="conversations.html">Messages</a></li>
                         <li>
                             <hr>
@@ -59,7 +59,7 @@
             <div class="sidebar-section">
                 <nav>
                     <ul>
-                        <li><a href="#">Settings</a></li>
+                        <li><span class="nav-unavailable" aria-disabled="true">Settings (coming soon)</span></li>
                     </ul>
                 </nav>
             </div>
@@ -80,13 +80,16 @@
             <section>
                 <div class="listing-gallery">
                     <div class="gallery-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10"
+                            alt="Example listing image" loading="lazy">
                     </div>
                     <div class="gallery-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10"
+                            alt="Example listing image" loading="lazy">
                     </div>
                     <div class="gallery-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbz3rpFrQ1CQ1SfQfR58uA9haTvR7uP0qdZi5fJKGZQ&s=10"
+                            alt="Example listing image" loading="lazy">
                     </div>
                 </div>
 
@@ -96,7 +99,7 @@
                     <div class="listing-description">Listing description. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ipsum voluptatem eaque similique nihil ad ex, blanditiis assumenda explicabo animi corrupti! Quos nemo at fugit magni velit possimus officiis? Reiciendis?</div>
                 </div>
 
-                <button type="button" class="message-button"><a href="messages.html">Message about item</a></button>
+                <a class="message-button" href="messages.html">Message about item</a>
             </section>
         </main>
 
@@ -104,6 +107,7 @@
             <p>&copy; 2026 TradeTree</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
