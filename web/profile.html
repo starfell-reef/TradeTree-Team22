@@ -69,6 +69,9 @@
             <section class="content-panel" aria-label="User profile listings">
                 <div class="search-header">
                     <h1>Search User's Listings</h1>
+                    <button class="report-button" type="button" data-report-open data-report-target="user">
+                        Report user
+                    </button>
                     <div class="search-bar">
                         <search aria-label="Search user's listings">
                             <input type="search" name="profile-search" id="profile-search"
@@ -136,6 +139,30 @@
                 </section>
             </section>
         </main>
+
+        <dialog class="report-dialog" aria-labelledby="report-dialog-title">
+            <form class="report-form" id="report-form">
+                <h2 id="report-dialog-title">Report user</h2>
+                <label for="report-reason">Reason for report</label>
+                <select id="report-reason" name="reason" required>
+                    <option value="" selected disabled>Select a reason</option>
+                    <option value="harassment">Harassment or bullying</option>
+                    <option value="scam">Scam or fraud</option>
+                    <option value="inappropriate-content">Inappropriate content</option>
+                    <option value="prohibited-item">Prohibited item</option>
+                    <option value="spam">Spam</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="report-details">Additional information</label>
+                <textarea id="report-details" name="details" rows="5" maxlength="1000"
+                    placeholder="Explain why you are reporting this user" required></textarea>
+                <p class="report-status" role="status" aria-live="polite"></p>
+                <div class="report-dialog-actions">
+                    <button type="button" class="report-cancel">Cancel</button>
+                    <button type="submit">Submit report</button>
+                </div>
+            </form>
+        </dialog>
 
         <footer class="site-footer">
             <p>&copy; 2026 TradeTree</p>

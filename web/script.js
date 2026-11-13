@@ -281,6 +281,45 @@ if (adminPage) {
 
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
+const reportDialog = document.querySelector('.report-dialog');
+const reportForm = document.getElementById('report-form');
+
+if (reportDialog && reportForm) {
+    let reportOpener;
+    const reportTitle = document.getElementById('report-dialog-title');
+    const reportDetails = document.getElementById('report-details');
+    const reportStatus = reportForm.querySelector('.report-status');
+
+    document.querySelectorAll('[data-report-open]').forEach(function (button) {
+        button.addEventListener('click', function () {
+            reportOpener = button;
+            const target = button.dataset.reportTarget;
+            reportTitle.textContent = `Report ${target}`;
+            reportDetails.placeholder = `Explain why you are reporting this ${target}`;
+            reportStatus.textContent = '';
+            reportForm.reset();
+            reportDialog.showModal();
+            document.getElementById('report-reason').focus();
+        });
+    });
+
+    reportForm.querySelector('.report-cancel').addEventListener('click', function () {
+        reportDialog.close();
+    });
+
+    reportDialog.addEventListener('close', function () {
+        if (reportOpener) {
+            reportOpener.focus();
+        }
+    });
+
+    reportForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        reportStatus.textContent =
+            'Report submission is not available yet. Your report has not been sent.';
+    });
+}
+
 document.querySelectorAll('a[href]').forEach(function (link) {
     const destination = link.getAttribute('href').split(/[?#]/, 1)[0];
     if (destination === currentPage) {

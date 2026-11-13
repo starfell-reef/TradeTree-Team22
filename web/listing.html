@@ -99,9 +99,38 @@
                     <div class="listing-description">Listing description. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ipsum voluptatem eaque similique nihil ad ex, blanditiis assumenda explicabo animi corrupti! Quos nemo at fugit magni velit possimus officiis? Reiciendis?</div>
                 </div>
 
-                <a class="message-button" href="messages.html">Message about item</a>
+                <div class="listing-actions">
+                    <a class="message-button" href="messages.html">Message about item</a>
+                    <button class="report-button" type="button" data-report-open data-report-target="listing">
+                        Report listing
+                    </button>
+                </div>
             </section>
         </main>
+
+        <dialog class="report-dialog" aria-labelledby="report-dialog-title">
+            <form class="report-form" id="report-form">
+                <h2 id="report-dialog-title">Report listing</h2>
+                <label for="report-reason">Reason for report</label>
+                <select id="report-reason" name="reason" required>
+                    <option value="" selected disabled>Select a reason</option>
+                    <option value="harassment">Harassment or bullying</option>
+                    <option value="scam">Scam or fraud</option>
+                    <option value="inappropriate-content">Inappropriate content</option>
+                    <option value="prohibited-item">Prohibited item</option>
+                    <option value="spam">Spam</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="report-details">Additional information</label>
+                <textarea id="report-details" name="details" rows="5" maxlength="1000"
+                    placeholder="Explain why you are reporting this listing" required></textarea>
+                <p class="report-status" role="status" aria-live="polite"></p>
+                <div class="report-dialog-actions">
+                    <button type="button" class="report-cancel">Cancel</button>
+                    <button type="submit">Submit report</button>
+                </div>
+            </form>
+        </dialog>
 
         <footer class="site-footer">
             <p>&copy; 2026 TradeTree</p>

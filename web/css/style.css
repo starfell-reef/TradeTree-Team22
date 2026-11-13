@@ -707,6 +707,14 @@ label {
     border-color: var(--color-muted);
 }
 
+.listing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin: var(--padding);
+}
+
 .listing-description {
     color: var(--color-primary);
 }
@@ -721,6 +729,62 @@ label {
 .message-button:hover {
     background: var(--color-muted);
     color: var(--color-info);
+}
+
+.report-button,
+.report-dialog-actions button {
+    border: 0;
+    border-radius: var(--soft-corner);
+    padding: 0.65rem 1rem;
+    background: var(--color-secondary);
+    color: var(--color-light);
+    font: inherit;
+}
+
+.report-button:hover,
+.report-dialog-actions button:hover {
+    background: var(--color-muted);
+}
+
+.report-dialog {
+    width: min(90vw, 32rem);
+    max-height: 90vh;
+    overflow: auto;
+    border: 1px solid var(--color-muted);
+    border-radius: var(--soft-curve);
+    padding: clamp(1rem, 3vw, 2rem);
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+
+.report-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.report-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.report-form h2,
+.report-form p {
+    margin: 0;
+}
+
+.report-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.report-dialog-actions .report-cancel {
+    background: var(--color-medium);
+    color: var(--color-primary);
+}
+
+.report-status {
+    color: var(--color-muted);
 }
 
 /* ADMIN PAGES */
